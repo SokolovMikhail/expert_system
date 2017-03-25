@@ -1,1 +1,12 @@
 C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\bin\Debug\ExpertSystem.exe.config
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.csprojResolveAssemblyReference.cache
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Properties.Resources.resources
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.ChooseTopic.resources
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Home.resources
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.csproj.GenerateResource.Cache
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\bin\Debug\ExpertSystem.exe
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\bin\Debug\ExpertSystem.pdb
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.exe
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.pdb
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Question.resources
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Result.resources
