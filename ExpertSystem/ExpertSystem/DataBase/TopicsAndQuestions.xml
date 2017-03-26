@@ -1,21 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <MainTag>
-<Topics>
-  <Topic id="0">
-    <Questions>
-      <Question id="0" question="Some text1" answerIds="0 1 2 3" correctAnswerId="0"></Question>
-      <Question id="1" question="Some text2" answerIds="4 5 6 7" correctAnswerId="6"></Question>
-    </Questions>
-    <Answers>
-      <Answer id="0" value="Первый ответ1"></Answer>
-      <Answer id="1" value="Второй ответ1"></Answer>
-      <Answer id="2" value="Третий ответ1"></Answer>
-      <Answer id="3" value="Четвертый ответ1"></Answer>
-      <Answer id="4" value="Первый ответ2"></Answer>
-      <Answer id="5" value="Второй ответ2"></Answer>
-      <Answer id="6" value="Третий ответ2"></Answer>
-      <Answer id="7" value="Четвертый ответ2"></Answer>
-    </Answers>
-  </Topic>
-</Topics>
+  <Topics>
+    <Topic id="0">
+      <Questions>
+        <Question id="0" question="Some text1" answerIds="0 1 2 3" correctAnswerId="0"></Question>
+        <Question id="1" question="Some text2" answerIds="4 5 6 7" correctAnswerId="6"></Question>
+      </Questions>
+      <Answers>
+        <Answer id="0" value="Первый ответ1"></Answer>
+        <Answer id="1" value="Второй ответ1"></Answer>
+        <Answer id="2" value="Третий ответ1"></Answer>
+        <Answer id="3" value="Четвертый ответ1"></Answer>
+        <Answer id="4" value="Первый ответ2"></Answer>
+        <Answer id="5" value="Второй ответ2"></Answer>
+        <Answer id="6" value="Третий ответ2"></Answer>
+        <Answer id="7" value="Четвертый ответ2"></Answer>
+      </Answers>
+    </Topic>
+    <Topic id="1">
+      <Questions>
+        <Question id="0" question="Вопросец здесь" answerIds="0 1 2 3" correctAnswerId="0" />
+      </Questions>
+    </Topic>
+  </Topics>
 </MainTag>
