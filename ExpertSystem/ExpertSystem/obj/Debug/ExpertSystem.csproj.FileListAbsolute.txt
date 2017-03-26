@@ -10,3 +10,4 @@ C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.exe
 C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.pdb
 C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Question.resources
 C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.Result.resources
+C:\Users\MIHA\Desktop\ES\ExpertSystem\ExpertSystem\obj\Debug\ExpertSystem.FactsAndRulesCreatingView.resources

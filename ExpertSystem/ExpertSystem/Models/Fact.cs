@@ -8,6 +8,7 @@ namespace ExpertSystem
 {
     public class Fact
     {
+        public int ID;
         public string Object;
         public string Attribute;
         public string Value;

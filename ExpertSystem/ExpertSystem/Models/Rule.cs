@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpertSystem.Models
+namespace ExpertSystem
 {
     public class Rule
     {
-        public List<Fact> Facts;
-        public List<Fact> Conclusion;
+        public int ID;
+        public string Facts;
+        public Fact Conclusion;
     }
 }
