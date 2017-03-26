@@ -45,12 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AnswerModel.cs" />
+    <Compile Include="Models\Fact.cs" />
     <Compile Include="Models\QuestionModel.cs" />
+    <Compile Include="Models\Rule.cs" />
     <Compile Include="Views\ChooseTopic.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\ChooseTopic.Designer.cs">
       <DependentUpon>ChooseTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FactsAndRulesCreatingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FactsAndRulesCreatingView.Designer.cs">
+      <DependentUpon>FactsAndRulesCreatingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
@@ -83,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Views\ChooseTopic.resx">
       <DependentUpon>ChooseTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FactsAndRulesCreatingView.resx">
+      <DependentUpon>FactsAndRulesCreatingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

@@ -33,12 +33,12 @@ namespace ExpertSystem
         {
             var document = XDocument.Load("../../DataBase/TopicsAndQuestions.xml").Root;
 
-            var TopicsBuf = document.Descendants("Topics").FirstOrDefault();//.Add(new XElement("Questions"));
-            var Topic1 = TopicsBuf.Descendants("Topic").Where(o => Int32.Parse(o.Attribute("id").Value) == 1).FirstOrDefault();
-            //Topic1.Add(new XElement("Questions"));
-            var Questions1 = Topic1.Descendants("Questions").FirstOrDefault();
-            Questions1.Add(new XElement("Question", new XAttribute("id", 0), new XAttribute("question", "Вопросец здесь"), new XAttribute("answerIds", "0 1 2 3"), new XAttribute("correctAnswerId", 0)));
-            document.Save("../../DataBase/TopicsAndQuestions.xml");
+            //var TopicsBuf = document.Descendants("Topics").FirstOrDefault();//.Add(new XElement("Questions"));
+            //var Topic1 = TopicsBuf.Descendants("Topic").Where(o => Int32.Parse(o.Attribute("id").Value) == 1).FirstOrDefault();
+            ////Topic1.Add(new XElement("Questions"));
+            //var Questions1 = Topic1.Descendants("Questions").FirstOrDefault();
+            //Questions1.Add(new XElement("Question", new XAttribute("id", 0), new XAttribute("question", "Вопросец здесь"), new XAttribute("answerIds", "0 1 2 3"), new XAttribute("correctAnswerId", 0)));
+            //document.Save("../../DataBase/TopicsAndQuestions.xml");
 
             var Topics = document.Element("Topics");
             foreach (XElement topic in Topics.Nodes())

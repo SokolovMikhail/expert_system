@@ -1,4 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Database>
-  
+  <Facts>
+    <Fact id="0" object="Smth0" attribute="atr0" value=""></Fact>
+    <Fact id="1" object="Smth1" attribute="atr1" value=""></Fact>
+    <Fact id="2" object="Smth2" attribute="atr2" value=""></Fact>
+    <Fact id="3" object="Smth3" attribute="atr3" value=""></Fact>
+  </Facts>
+  <Rules>
+    <Rule id="0" if="0 ^ 1 v 2" result="4"></Rule>
+    <Rule id="1" if="1 ^ 1 v 2" result="4"></Rule>
+    <Rule id="2" if="3 ^ 1 v 2" result="4"></Rule>
+  </Rules>
 </Database>
