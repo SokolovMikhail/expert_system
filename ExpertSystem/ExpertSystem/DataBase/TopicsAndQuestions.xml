@@ -19,7 +19,7 @@
     </Topic>
     <Topic id="3" name="ТЕМАА">
       <Questions>
-        <Question id="0" questionText="какой то вопросик вот здеся будет" questionRule="7 8" answerIds="0 1 2 3" />
+        <Question id="0" questionText="какой то вопросик вот здеся будет" questionRule="7 8" answerIds="0 1 2 4" />
         <Question id="1" questionText="Бла ла алава " questionRule="6 5 1 1 0" answerIds="4 1 3 0" />
         <Question id="2" questionText="Какой то незамысловатый Вопросссс" questionRule="0 1 2 3 4" answerIds="4 1 3 0" />
       </Questions>

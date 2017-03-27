@@ -105,6 +105,7 @@ namespace ExpertSystem
                     if (output.Count == 1 && output[0] == "1True" && (!ResultFacts.Contains(rule.Conclusion)))
                     {
                         ResultFacts.Add(rule.Conclusion);
+                        factsIdsList.Add(rule.Conclusion.ID.ToString());
                     }
                 }
             }
