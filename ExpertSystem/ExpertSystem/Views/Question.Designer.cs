@@ -66,9 +66,10 @@
             // 
             // checkBox4
             // 
+            this.checkBox4.AutoEllipsis = true;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.checkBox4.Location = new System.Drawing.Point(320, 125);
+            this.checkBox4.Location = new System.Drawing.Point(6, 168);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(170, 21);
             this.checkBox4.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.checkBox3.Location = new System.Drawing.Point(320, 19);
+            this.checkBox3.Location = new System.Drawing.Point(7, 120);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(170, 21);
             this.checkBox3.TabIndex = 2;
@@ -92,7 +93,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.checkBox2.Location = new System.Drawing.Point(7, 125);
+            this.checkBox2.Location = new System.Drawing.Point(6, 72);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(170, 21);
             this.checkBox2.TabIndex = 1;
@@ -102,9 +103,10 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.AutoEllipsis = true;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.checkBox1.Location = new System.Drawing.Point(7, 19);
+            this.checkBox1.Location = new System.Drawing.Point(7, 28);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(170, 21);
             this.checkBox1.TabIndex = 0;

@@ -44,16 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\RPN.cs" />
+    <Compile Include="Helpers\Solution.cs" />
     <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\Fact.cs" />
     <Compile Include="Models\QuestionModel.cs" />
     <Compile Include="Models\Rule.cs" />
-    <Compile Include="Views\ChooseTopic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ChooseTopic.Designer.cs">
-      <DependentUpon>ChooseTopic.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Topic.cs" />
     <Compile Include="Views\FactsAndRulesCreatingView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +86,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\ChooseTopic.resx">
-      <DependentUpon>ChooseTopic.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\FactsAndRulesCreatingView.resx">
       <DependentUpon>FactsAndRulesCreatingView.cs</DependentUpon>
     </EmbeddedResource>

@@ -9,9 +9,9 @@ namespace ExpertSystem
     public class QuestionModel
     {
         public int id;
-        public string question;
-        List<string> answers;
+        public string questionText;
+        public List<Fact> QuestionFacts;
+        public List<Fact> QuestionAnswers;
         public string answersIds;
-        public int correctAnswerId;
     }
 }

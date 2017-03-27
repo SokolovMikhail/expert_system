@@ -8,11 +8,17 @@
     <Fact id="4" object="Макс" attribute="Пидр" value="Да" />
     <Fact id="5" object="Собака" attribute="Слабая" value="Да" />
     <Fact id="6" object="Факт" attribute="Условие" value="ЧТОТО" />
+    <Fact id="7" object="ID7" attribute="Именно он" value="Да да7" />
+    <Fact id="8" object="ID8" attribute="Именно он" value="Да да8" />
+    <Fact id="9" object="ID8" attribute="Именно он" value="Да да9" />
+    <Fact id="10" object="Макс" attribute="Не пидор" value="Нет" />
   </Facts>
   <Rules>
-    <Rule id="0" if="0 ^ 1 v 2" result="4"></Rule>
-    <Rule id="1" if="1 ^ 1 v 2" result="4"></Rule>
-    <Rule id="2" if="3 ^ 1 v 2" result="4"></Rule>
+    <Rule id="0" if="0 v 1 ^ 2" result="4"></Rule>
+    <Rule id="1" if="1 ^ 1 v 2" result="5"></Rule>
+    <Rule id="2" if="3 ^ 1 v 2" result="6"></Rule>
     <Rule id="3" if="4 ^ 5" result="6" />
+    <Rule id="4" if="0 v ( 1 v 2 )" result="0" />
+    <Rule id="5" if="7 ^ ( 8 v 1)" result="0" />
   </Rules>
 </Database>

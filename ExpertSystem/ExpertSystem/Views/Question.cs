@@ -18,15 +18,15 @@ namespace ExpertSystem
         private int questionId;
         private int topicId;
         List<QuestionModel> QuestionsList;//Общий список вопросов
-        List<AnswerModel> AnswersList;//Общий список ответов
+        //List<AnswerModel> AnswersList;//Общий список ответов
         QuestionModel currentQuestion;//Вопрос
         List<AnswerModel> CurrentAnswersList;//Ответы
         int totalErrors;
-        public Question(List<QuestionModel> questions,List<AnswerModel> answers, int currentsQuestionId, int totalErrors)
+        public Question(List<QuestionModel> questions, int currentsQuestionId, int totalErrors)
         {
             InitializeComponent();
             this.QuestionsList = questions;
-            this.AnswersList = answers;
+            //this.AnswersList = answers;
             this.questionId = currentsQuestionId;
             PrepareFieldsData();
             this.totalErrors = totalErrors;
@@ -34,16 +34,12 @@ namespace ExpertSystem
 
         private void PrepareFieldsData()
         {
-            currentQuestion = QuestionsList.Where(o => o.id == questionId).First();
-            QuestionTextBox.Text = currentQuestion.question;
-            List<string> AnswerIds = new List<string>();
-            AnswerIds = currentQuestion.answersIds.Split().ToList();
-            CurrentAnswersList = new List<AnswerModel>();
-            CurrentAnswersList = AnswersList.Where(o => AnswerIds.Contains(o.id.ToString())).ToList();
-            checkBox1.Text = CurrentAnswersList[0].Value;
-            checkBox2.Text = CurrentAnswersList[1].Value;
-            checkBox3.Text = CurrentAnswersList[2].Value;
-            checkBox4.Text = CurrentAnswersList[3].Value;
+            currentQuestion = QuestionsList[questionId];
+            QuestionTextBox.Text = currentQuestion.questionText;
+            checkBox1.Text = QuestionsList[questionId].QuestionAnswers[0].Object + " " +QuestionsList[questionId].QuestionAnswers[0].Attribute + " " + QuestionsList[questionId].QuestionAnswers[0].Value;
+            checkBox2.Text = QuestionsList[questionId].QuestionAnswers[1].Object + " " +QuestionsList[questionId].QuestionAnswers[1].Attribute + " " + QuestionsList[questionId].QuestionAnswers[1].Value;
+            checkBox3.Text = QuestionsList[questionId].QuestionAnswers[2].Object + " " +QuestionsList[questionId].QuestionAnswers[2].Attribute + " " + QuestionsList[questionId].QuestionAnswers[2].Value;
+            checkBox4.Text = QuestionsList[questionId].QuestionAnswers[3].Object + " " +QuestionsList[questionId].QuestionAnswers[3].Attribute + " " + QuestionsList[questionId].QuestionAnswers[3].Value;
         }
 
 
@@ -53,6 +49,8 @@ namespace ExpertSystem
             Home home = new Home();
             home.Show();
         }
+
+        #region checkBoxLogic
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -128,10 +126,11 @@ namespace ExpertSystem
                 nextButton.Enabled = false;
             }
         }
-
+        #endregion
         private void nextButton_Click(object sender, EventArgs e)
         {
             int chosenVariant = 0;
+
             if (checkBox1.Checked == true)
             {
                 chosenVariant = 0;
@@ -149,21 +148,38 @@ namespace ExpertSystem
                 chosenVariant = 3;
             }
 
-            if(CurrentAnswersList[chosenVariant].id!= currentQuestion.correctAnswerId)
+
+
+            List<Fact> ResultFacts = Solution.Solve(currentQuestion);
+            try
+            {
+                ResultFacts.Where(o => o.ID == currentQuestion.QuestionAnswers[chosenVariant].ID).First();
+            }
+            catch
             {
                 totalErrors++;
-                string message = "Правильные ответ: " + CurrentAnswersList.Where(o=> o.id==currentQuestion.correctAnswerId).First().Value;
+                string message = "Правильные ответ: ";// + ResultFacts.Where(o => o.);
+                foreach(Fact fact in currentQuestion.QuestionAnswers)
+                {
+                    try
+                    {
+                        ResultFacts.Where(o => o.ID == fact.ID).First();
+                        message += "Объект " + fact.Object + " Аттрибут " + fact.Attribute + " Значение" + fact.Value + "\n";
+                    }
+                    catch
+                    {
+                        continue;//Поменять на break, если надо будет только один вариант ответа
+                    }
+                }
                 string caption = "Неверный ответ";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(this, message, caption, buttons);
             }
-
-
             this.Hide();
             if (questionId < QuestionsList.Count - 1)
             {
-                Question nextPage = new Question(QuestionsList, AnswersList, questionId + 1, totalErrors);
+                Question nextPage = new Question(QuestionsList, questionId + 1, totalErrors);
                 nextPage.Show();
             }
             else
@@ -179,5 +195,7 @@ namespace ExpertSystem
         {
 
         }
+
+
     }
 }

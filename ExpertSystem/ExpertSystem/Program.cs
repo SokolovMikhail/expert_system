@@ -16,7 +16,7 @@ namespace ExpertSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FactsAndRulesCreatingView());
+            Application.Run(new Home());
         }
     }
 }
