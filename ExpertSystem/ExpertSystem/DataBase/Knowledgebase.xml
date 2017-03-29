@@ -21,5 +21,6 @@
     <Rule id="4" if="0 v ( 1 v 2 )" result="0" />
     <Rule id="5" if="7 ^ ( 8 v 1)" result="0" />
     <Rule id="6" if="7 ^ 8" result="1" />
+    <Rule id="7" if="10" result="9" />
   </Rules>
 </Database>

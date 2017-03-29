@@ -158,7 +158,7 @@ namespace ExpertSystem
             catch
             {
                 totalErrors++;
-                string message = "Правильные ответ: ";// + ResultFacts.Where(o => o.);
+                string message = "Правильный ответ:\n";// + ResultFacts.Where(o => o.);
                 foreach(Fact fact in currentQuestion.QuestionAnswers)
                 {
                     try
