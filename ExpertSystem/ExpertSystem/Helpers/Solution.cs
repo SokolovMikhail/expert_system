@@ -83,12 +83,16 @@ namespace ExpertSystem
                                     }
                                     else
                                     {
-                                        break;//если кого то из фактов не было подано, то больше не рассматриваем правило
+                                        output[i] = "1False";
+                                        output.RemoveRange(i + 1, 2);
+                                        i = 0;
+                                        continue;
+                                        //break;//если кого то из фактов не было подано, то больше не рассматриваем правило
                                     }
                                 }
                                 if (output[i + 2] == "v")//Если дизъюнкция
                                 {
-                                    if ((factsIdsList.Contains(output[i]) || factsIdsList.Contains(output[i + 1])) || (factsIdsList.Contains(output[i]) || output[i + 1] == "1True") || (factsIdsList.Contains(output[i + 1]) || output[i] == "1True"))//Если оба факта поданы в вопросе, то заменить 1True
+                                    if ((factsIdsList.Contains(output[i]) && factsIdsList.Contains(output[i + 1])) || (factsIdsList.Contains(output[i]) && output[i + 1] == "1True") || (factsIdsList.Contains(output[i + 1]) && output[i] == "1True") || (output[i] == "1False" && output[i + 1] == "1True") || (output[i] == "1True" && output[i + 1] == "1False"))//Если оба факта поданы в вопросе, то заменить 1True
                                     {
                                         output[i] = "1True";
                                         output.RemoveRange(i + 1, 2);
@@ -97,7 +101,11 @@ namespace ExpertSystem
                                     }
                                     else
                                     {
-                                        break;//если кого то из фактов не было подано, то больше не рассматриваем правило
+                                        output[i] = "1False";
+                                        output.RemoveRange(i + 1, 2);
+                                        i = 0;
+                                        continue;
+                                        //break;//если кого то из фактов не было подано, то больше не рассматриваем правило
                                     }
                                 }
                             }

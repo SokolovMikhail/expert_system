@@ -193,7 +193,7 @@ namespace ExpertSystem
                     try
                     {
                         ResultFacts.Where(o => o.ID == fact.ID).First();
-                        message += "Объект " + fact.Object + " Аттрибут " + fact.Attribute + " Значение" + fact.Value + "\n";
+                        message += "Объект " + fact.Object + " Аттрибут " + fact.Attribute + " Значение " + fact.Value + "\n";
                     }
                     catch
                     {
