@@ -16,30 +16,34 @@ namespace ExpertSystem
     public partial class Question : Form
     {
         private int questionId;
-        private int topicId;
+        private int totalCount;
         List<QuestionModel> QuestionsList;//Общий список вопросов
         //List<AnswerModel> AnswersList;//Общий список ответов
         QuestionModel currentQuestion;//Вопрос
         List<AnswerModel> CurrentAnswersList;//Ответы
         int totalErrors;
-        public Question(List<QuestionModel> questions, int currentsQuestionId, int totalErrors)
+        public Question(List<QuestionModel> questions, int totalErrors, int totalCount)
         {
+            this.totalCount = totalCount;
             InitializeComponent();
             this.QuestionsList = questions;
             //this.AnswersList = answers;
-            this.questionId = currentsQuestionId;
+            //this.questionId = currentsQuestionId;
             PrepareFieldsData();
             this.totalErrors = totalErrors;
         }
 
         private void PrepareFieldsData()
         {
+            Random rnd = new Random();
+
+            questionId = rnd.Next(0, QuestionsList.Count);
             currentQuestion = QuestionsList[questionId];
             QuestionTextBox.Text = currentQuestion.questionText;
             //Варианты ответа
             try
             {
-                checkBox1.Text = QuestionsList[questionId].QuestionAnswers[0].Object + " " + QuestionsList[questionId].QuestionAnswers[0].Attribute + " " + QuestionsList[questionId].QuestionAnswers[0].Value;
+                checkBox1.Text = currentQuestion.QuestionAnswers[0].Value;
             }
             catch
             {
@@ -47,7 +51,7 @@ namespace ExpertSystem
             }
             try
             {
-                checkBox2.Text = QuestionsList[questionId].QuestionAnswers[1].Object + " " + QuestionsList[questionId].QuestionAnswers[1].Attribute + " " + QuestionsList[questionId].QuestionAnswers[1].Value;
+                checkBox2.Text = currentQuestion.QuestionAnswers[1].Value;
             }
             catch
             {
@@ -55,7 +59,7 @@ namespace ExpertSystem
             }
             try
             {
-                checkBox3.Text = QuestionsList[questionId].QuestionAnswers[2].Object + " " + QuestionsList[questionId].QuestionAnswers[2].Attribute + " " + QuestionsList[questionId].QuestionAnswers[2].Value;
+                checkBox3.Text = currentQuestion.QuestionAnswers[2].Value;
             }
             catch
             {
@@ -63,12 +67,13 @@ namespace ExpertSystem
             }
             try
             {
-                checkBox4.Text = QuestionsList[questionId].QuestionAnswers[3].Object + " " + QuestionsList[questionId].QuestionAnswers[3].Attribute + " " + QuestionsList[questionId].QuestionAnswers[3].Value;
+                checkBox4.Text = currentQuestion.QuestionAnswers[3].Value;
             }
             catch
             {
                 checkBox4.Visible = false;
             }
+            QuestionsList.RemoveAt(questionId);
         }
 
 
@@ -193,7 +198,7 @@ namespace ExpertSystem
                     try
                     {
                         ResultFacts.Where(o => o.ID == fact.ID).First();
-                        message += "Объект " + fact.Object + " Аттрибут " + fact.Attribute + " Значение " + fact.Value + "\n";
+                        message += fact.Value + "\n";
                     }
                     catch
                     {
@@ -206,14 +211,15 @@ namespace ExpertSystem
                 result = MessageBox.Show(this, message, caption, buttons);
             }
             this.Hide();
-            if (questionId < QuestionsList.Count - 1)
+            if (QuestionsList.Count > 0)
             {
-                Question nextPage = new Question(QuestionsList, questionId + 1, totalErrors);
+                Question nextPage = new Question(QuestionsList, totalErrors, totalCount);
                 nextPage.Show();
             }
             else
             {
-                Result finalPage = new Result(totalErrors,QuestionsList.Count);
+
+                Result finalPage = new Result(totalErrors, totalCount);
                 finalPage.Show();
             }
 

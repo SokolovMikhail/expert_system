@@ -86,10 +86,20 @@
     <Fact id="83" object="мяч" attribute="команда" value="А" />
     <Fact id="84" object="мяч" attribute="команда" value="Б" />
     <Fact id="85" object="мяч" attribute="размер" value="любой" />
+    <Fact id="86" object="игрок" attribute="позиция" value="любой" />
+    <Fact id="87" object="мяч" attribute="положение" value="вратарская площадь" />
   </Facts>
   <Rules>
     <Rule id="1" if="19 ^ 21 v 18 ^ 23" result="1" />
     <Rule id="2" if="19 ^ 22 v 18 ^ 24" result="2" />
     <Rule id="3" if="19 ^ 20" result="3" />
+    <Rule id="4" if="20 ^ ( 18 v 19 )" result="27" />
+    <Rule id="5" if="22 ^ ( 18 v 19 )" result="28" />
+    <Rule id="6" if="21 ^ ( 18 v 19 )" result="29" />
+    <Rule id="7" if="75 ^ 87" result="78" />
+    <Rule id="8" if="35" result="86" />
+    <Rule id="9" if="68" result="55" />
+    <Rule id="10" if="57 ^ 61" result="32" />
+    <Rule id="11" if="57 ^ 61" result="56" />
   </Rules>
 </Database>

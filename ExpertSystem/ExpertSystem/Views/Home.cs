@@ -18,12 +18,15 @@ namespace ExpertSystem
             InitializeComponent();
             var topicsFile = XDocument.Load("../../DataBase/TopicsAndQuestions.xml").Root;
             var Topics = topicsFile.Descendants("Topics").FirstOrDefault();
+            int i = 0;
             foreach (XElement topic in Topics.Nodes())//Parsing Topics
             {
                 int id = Int32.Parse(topic.Attribute("id").Value);
                 string name = topic.Attribute("name").Value;
                 topicsComboBox.Items.Add("Id = " + id.ToString() + " Название = " + name);
             }
+            topicsComboBox.SelectedIndex = 0;
+
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -79,7 +82,7 @@ namespace ExpertSystem
                     QuestionFacts = QuestionFacts, QuestionAnswers = AnswersFacts });
             }
 
-            Question questionPage = new Question(QuestionsList, 0, 0);
+            Question questionPage = new Question(QuestionsList, 0, QuestionsList.Count);
             this.Hide();
             questionPage.Show();
             

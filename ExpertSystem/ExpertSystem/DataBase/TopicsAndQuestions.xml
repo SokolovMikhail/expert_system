@@ -4,6 +4,31 @@
     <Topic id="1" name="Возраст">
       <Questions>
         <Question id="0" questionText="На площадке играют мальчики в возрасте 8-12 лет, мяч какого размера используется?" questionRule="19 21" answerIds="1 2 3 85" />
+        <Question id="1" questionText="На площадке играют девочки в возрасте 8-14 лет, мяч какого размера используется?" questionRule="18 23" answerIds="1 2 3 85" />
+        <Question id="2" questionText="На площадке играют девочки старше 14 лет, мяч какого размера используется?" questionRule="18 24" answerIds="1 2 3 85" />
+        <Question id="3" questionText="На площадке играют мальчики старше 16 лет, мяч какого размера используется?" questionRule="19 20" answerIds="1 2 3 85" />
+        <Question id="4" questionText="На площадке играют мальчики в возрасте 12-16 лет, мяч какого размера используется?" questionRule="19 22" answerIds="1 2 3 85" />
+        <Question id="5" questionText="Сколько длится тайм у женских команд старше 16 лет?" questionRule="18 20" answerIds="27 28 29" />
+        <Question id="6" questionText="Сколько длится тайм у мужских команд старше 16 лет?" questionRule="19 20" answerIds="27 28 29" />
+        <Question id="7" questionText="Сколько длится тайм у девочек в возрастной категории 12-16 лет?" questionRule="18 22" answerIds="27 28 29" />
+        <Question id="8" questionText="Сколько длится тайм у мальчиков в возрастной категории 12-16 лет?" questionRule="19 22" answerIds="27 28 29" />
+        <Question id="9" questionText="Сколько длится тайм у мальчиков в возрастной категории 8-12 лет?" questionRule="19 21" answerIds="27 28 29" />
+        <Question id="10" questionText="Сколько длится тайм у девочек в возрастной категории 8-12 лет?" questionRule="18 21" answerIds="27 28 29" />
+      </Questions>
+      <Answers />
+    </Topic>
+    <Topic id="2" name="Позиции">
+      <Questions>
+        <Question id="0" questionText="Кто может брать мяч в руки, когда он катится во вратарской площади?" questionRule="75 87" answerIds="13 16 15 86" />
+        <Question id="1" questionText="Игрок какой позиции может пробивать пенальти?" questionRule="35" answerIds="14 15 13 86" />
+      </Questions>
+      <Answers />
+    </Topic>
+    <Topic id="3" name="Броски">
+      <Questions>
+        <Question id="0" questionText="Какой бросок выполняется после гола?" questionRule="68" answerIds="31 33 34 32" />
+        <Question id="1" questionText="Игрок команды А ведет мяч, игрок команды Б выбивает мяч в аут. Каким броском будет разыгран мяч?" questionRule="57 61" answerIds="31 48 34 32" />
+        <Question id="2" questionText="Игрок команды А ведет мяч, игрок команды Б выбивает мяч в аут. Какая команда будет разыгрывать мяч?" questionRule="57 61" answerIds="25 26" />
       </Questions>
       <Answers />
     </Topic>
