@@ -36,10 +36,39 @@ namespace ExpertSystem
         {
             currentQuestion = QuestionsList[questionId];
             QuestionTextBox.Text = currentQuestion.questionText;
-            checkBox1.Text = QuestionsList[questionId].QuestionAnswers[0].Object + " " +QuestionsList[questionId].QuestionAnswers[0].Attribute + " " + QuestionsList[questionId].QuestionAnswers[0].Value;
-            checkBox2.Text = QuestionsList[questionId].QuestionAnswers[1].Object + " " +QuestionsList[questionId].QuestionAnswers[1].Attribute + " " + QuestionsList[questionId].QuestionAnswers[1].Value;
-            checkBox3.Text = QuestionsList[questionId].QuestionAnswers[2].Object + " " +QuestionsList[questionId].QuestionAnswers[2].Attribute + " " + QuestionsList[questionId].QuestionAnswers[2].Value;
-            checkBox4.Text = QuestionsList[questionId].QuestionAnswers[3].Object + " " +QuestionsList[questionId].QuestionAnswers[3].Attribute + " " + QuestionsList[questionId].QuestionAnswers[3].Value;
+            //Варианты ответа
+            try
+            {
+                checkBox1.Text = QuestionsList[questionId].QuestionAnswers[0].Object + " " + QuestionsList[questionId].QuestionAnswers[0].Attribute + " " + QuestionsList[questionId].QuestionAnswers[0].Value;
+            }
+            catch
+            {
+                checkBox1.Visible = false;
+            }
+            try
+            {
+                checkBox2.Text = QuestionsList[questionId].QuestionAnswers[1].Object + " " + QuestionsList[questionId].QuestionAnswers[1].Attribute + " " + QuestionsList[questionId].QuestionAnswers[1].Value;
+            }
+            catch
+            {
+                checkBox2.Visible = false;
+            }
+            try
+            {
+                checkBox3.Text = QuestionsList[questionId].QuestionAnswers[2].Object + " " + QuestionsList[questionId].QuestionAnswers[2].Attribute + " " + QuestionsList[questionId].QuestionAnswers[2].Value;
+            }
+            catch
+            {
+                checkBox3.Visible = false;
+            }
+            try
+            {
+                checkBox4.Text = QuestionsList[questionId].QuestionAnswers[3].Object + " " + QuestionsList[questionId].QuestionAnswers[3].Attribute + " " + QuestionsList[questionId].QuestionAnswers[3].Value;
+            }
+            catch
+            {
+                checkBox4.Visible = false;
+            }
         }
 
 

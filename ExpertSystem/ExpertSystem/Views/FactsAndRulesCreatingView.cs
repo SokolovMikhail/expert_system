@@ -228,14 +228,20 @@ namespace ExpertSystem
             string answer2 = answerText2.Text;
             string answer3 = answerText3.Text;
             string answer4 = answerText4.Text;
+            string allAnswersIds = PrepareAnswersIds(answer1, answer2, answer3, answer4);
 
-            if (question1 == "" || question2 == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "")
+            if (question1 == "" || question2 == "")
             {
                 string message = "Заполните все поля";
                 resultDialog = MessageBox.Show(this, message, caption, buttons);
                 return;
             }
-
+            if (allAnswersIds.Split().ToList().Count<2)
+            {
+                string message = "Выберите хотя бы два варианта ответа";
+                resultDialog = MessageBox.Show(this, message, caption, buttons);
+                return;
+            }
             List<string> factsIds = question2.Split().ToList();
 
             foreach(string id in factsIds)
@@ -267,7 +273,7 @@ namespace ExpertSystem
                 var Topic = Topics.Descendants("Topic").Where(o => Int32.Parse(o.Attribute("id").Value) == selectedTopicId).FirstOrDefault();
                 var Questions = Topic.Descendants("Questions").FirstOrDefault();
                 lastQuesionId++;
-                Questions.Add(new XElement("Question", new XAttribute("id", lastQuesionId), new XAttribute("questionText", question1), new XAttribute("questionRule", question2), new XAttribute("answerIds", answer1.Split().ToList()[2] + " " + answer2.Split().ToList()[2] + " " + answer3.Split().ToList()[2] + " " + answer4.Split().ToList()[2])));
+                Questions.Add(new XElement("Question", new XAttribute("id", lastQuesionId), new XAttribute("questionText", question1), new XAttribute("questionRule", question2), new XAttribute("answerIds", allAnswersIds)));
                 questionsList.Items.Add("Id = " + lastQuesionId.ToString() + " Вопрос = " + question1 + "\n Факты = " + question2);
                 document.Save("../../DataBase/TopicsAndQuestions.xml");
             }
@@ -340,6 +346,50 @@ namespace ExpertSystem
             Home home = new Home();
             this.Hide();
             home.Show();
+        }
+
+        private string PrepareAnswersIds(string a1, string a2, string a3, string a4)
+        {
+            string answer1Id = "";
+            string answer2Id = "";
+            string answer3Id = "";
+            string answer4Id = "";
+            try
+            {
+                answer1Id = a1.Split().ToList()[2];
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                answer2Id = a2.Split().ToList()[2];
+                answer1Id += " ";
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                answer3Id = a3.Split().ToList()[2];
+                answer2Id += " ";
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                answer4Id = a4.Split().ToList()[2];
+                answer3Id += " ";
+            }
+            catch
+            {
+
+            }
+            return answer1Id + answer2Id + answer3Id + answer4Id;
         }
     }
 }
