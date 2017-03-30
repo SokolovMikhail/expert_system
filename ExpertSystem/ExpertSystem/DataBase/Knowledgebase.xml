@@ -1,26 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Database>
   <Facts>
-    <Fact id="0" object="Smth0" attribute="atr0" value="val1"></Fact>
-    <Fact id="1" object="Smth1" attribute="atr1" value="val2"></Fact>
-    <Fact id="2" object="Smth2" attribute="atr2" value="val3"></Fact>
-    <Fact id="3" object="Smth3" attribute="atr3" value="val4"></Fact>
-    <Fact id="4" object="Макс" attribute="Пидр" value="Да" />
-    <Fact id="5" object="Собака" attribute="Слабая" value="Да" />
-    <Fact id="6" object="Факт" attribute="Условие" value="ЧТОТО" />
-    <Fact id="7" object="ID7" attribute="Именно он" value="Да да7" />
-    <Fact id="8" object="ID8" attribute="Именно он" value="Да да8" />
-    <Fact id="9" object="ID8" attribute="Именно он" value="Да да9" />
-    <Fact id="10" object="Макс" attribute="Не пидор" value="Нет" />
+    <Fact id="1" object="мяч" attribute="размер" value="1" />
+    <Fact id="2" object="мяч" attribute="размер" value="2" />
+    <Fact id="3" object="мяч" attribute="размер" value="3" />
+    <Fact id="4" object="ворота" attribute="ширина" value="3м" />
+    <Fact id="5" object="ворота" attribute="высота" value="2м" />
+    <Fact id="6" object="площадка" attribute="длина" value="40м" />
+    <Fact id="7" object="площадка" attribute="ширина" value="20м" />
+    <Fact id="8" object="линия площади ворот" attribute="расстояние от ворот" value="6м" />
+    <Fact id="9" object="линия свободных бросков" attribute="расстояние от ворот" value="9м" />
+    <Fact id="10" object="линия ограничения вратаря" attribute="расстояние от ворот" value="4м" />
+    <Fact id="11" object="линия пенальти" attribute="расстояние от ворот" value="7м" />
+    <Fact id="12" object="линия замены" attribute="расстояние от центральной линии" value="4.5м" />
+    <Fact id="13" object="игрок" attribute="позиция" value="вратарь" />
+    <Fact id="14" object="игрок" attribute="позиция" value="крайний" />
+    <Fact id="15" object="игрок" attribute="позиция" value="центральный" />
+    <Fact id="16" object="игрок" attribute="позиция" value="полусредний" />
+    <Fact id="17" object="игрок" attribute="позиция" value="линейный" />
+    <Fact id="18" object="игроки" attribute="пол" value="женский" />
+    <Fact id="19" object="игроки" attribute="пол" value="мужской" />
+    <Fact id="20" object="игроки" attribute="возраст" value="16+ лет" />
+    <Fact id="21" object="игроки" attribute="возраст" value="8-12 лет" />
+    <Fact id="22" object="игроки" attribute="возраст" value="12-16 лет" />
+    <Fact id="23" object="игроки" attribute="возраст" value="8-14 лет" />
+    <Fact id="24" object="игроки" attribute="возраст" value="14+ лет" />
+    <Fact id="25" object="игрок" attribute="команда" value="А" />
+    <Fact id="26" object="игрок" attribute="команда" value="Б" />
+    <Fact id="27" object="тайм" attribute="продолжительность" value="30 минут" />
+    <Fact id="28" object="тайм" attribute="продолжительность" value="25 минут" />
+    <Fact id="29" object="тайм" attribute="продолжительность" value="20 минут" />
+    <Fact id="30" object="тайм-аут" attribute="продолжительность" value="1 минута" />
+    <Fact id="31" object="бросок" attribute="тип" value="начальный бросок" />
+    <Fact id="32" object="бросок" attribute="тип" value="бросок из-за боковой линии" />
+    <Fact id="33" object="бросок" attribute="тип" value="бросок вратаря" />
+    <Fact id="34" object="бросок" attribute="тип" value="свободный бросок" />
+    <Fact id="35" object="бросок" attribute="тип" value="пенальти" />
+    <Fact id="36" object="наказание" attribute="категория" value="предупреждение" />
+    <Fact id="37" object="наказание" attribute="категория" value="удаление на 2 минуты" />
+    <Fact id="38" object="наказание" attribute="категория" value="дисквалификация" />
+    <Fact id="39" object="нарушение" attribute="действие" value="демонстрация недовольства решением судьи" />
+    <Fact id="40" object="нарушение" attribute="действие" value="нарушение правила 3 метров при выполнении стандартного броска" />
+    <Fact id="41" object="нарушение" attribute="действие" value="активная блокировка броска или паса ногой ниже колена" />
+    <Fact id="42" object="нарушение" attribute="действие" value="симуляция" />
+    <Fact id="43" object="удаление" attribute="время" value="2 минуты" />
+    <Fact id="44" object="нарушение" attribute="действие" value="демонстративная откидка мяча после свистка" />
+    <Fact id="45" object="нарушение" attribute="действие" value="отказ вратаря отражать пенальти" />
+    <Fact id="46" object="нарушение" attribute="действие" value="бросок мяча в голову соперника при штрафном броске или пенальти" />
+    <Fact id="47" object="нарушение" attribute="действие" value="умышленный бросок мяча в соперника во время остановки игры" />
+    <Fact id="48" object="бросок" attribute="тип" value="угловой бросок" />
+    <Fact id="49" object="линия" attribute="тип" value="линия площади ворот" />
+    <Fact id="50" object="линия" attribute="тип" value="линия свободных бросков" />
+    <Fact id="51" object="линия" attribute="тип" value="линия ограничения вратаря" />
+    <Fact id="52" object="линия" attribute="тип" value="линия пенальти" />
+    <Fact id="53" object="линия" attribute="тип" value="линия замены" />
+    <Fact id="54" object="судьи" attribute="количество" value="2" />
+    <Fact id="55" object="гол" attribute="бросок" value="начальный бросок" />
+    <Fact id="56" object="мяч" attribute="последнее касание" value="команда А" />
+    <Fact id="57" object="мяч" attribute="последнее касание" value="команда Б" />
+    <Fact id="58" object="мяч" attribute="последнее касание" value="вратарь команды А" />
+    <Fact id="59" object="мяч" attribute="последнее касание" value="вратарь команды Б" />
+    <Fact id="60" object="мяч" attribute="уход" value="лицевая линия" />
+    <Fact id="61" object="мяч" attribute="уход" value="боковая линия" />
+    <Fact id="62" object="скамейка" attribute="расстояние" value="3.5м" />
+    <Fact id="63" object="игроки" attribute="минимальное количество одной команды" value="5" />
+    <Fact id="64" object="свободный бросок команды А" attribute="минимальное расстояние до игрока команды Б" value="3м" />
+    <Fact id="65" object="свободный бросок команды Б" attribute="минимальное расстояние до игрока команды А" value="3м" />
+    <Fact id="66" object="бросок из-за боковой линии" attribute="положение игрока" value="одна нога стоит на боковой линии" />
+    <Fact id="67" object="замена" attribute="количество" value="неограниченно" />
+    <Fact id="68" object="мяч" attribute="положение" value="пересек линию ворот" />
+    <Fact id="69" object="мяч" attribute="положение" value="площадка" />
+    <Fact id="70" object="мяч" attribute="положение" value="площадь ворот" />
+    <Fact id="71" object="гол" attribute="засчитан" value="да" />
+    <Fact id="72" object="гол" attribute="засчитан" value="нет" />
+    <Fact id="73" object="перерыв" attribute="продолжительность" value="15 минут" />
+    <Fact id="74" object="игрок" attribute="количество шагов с мячом" value="3" />
+    <Fact id="75" object="мяч" attribute="состояние" value="катится" />
+    <Fact id="76" object="мяч" attribute="состояние" value="лежит" />
+    <Fact id="77" object="мяч" attribute="состояние" value="скачет" />
+    <Fact id="78" object="мяч" attribute="игрок" value="вратарь" />
+    <Fact id="79" object="мяч" attribute="игрок" value="крайний" />
+    <Fact id="80" object="мяч" attribute="игрок" value="полусредний" />
+    <Fact id="81" object="мяч" attribute="игрок" value="центральный" />
+    <Fact id="82" object="мяч" attribute="игрок" value="линейный" />
+    <Fact id="83" object="мяч" attribute="команда" value="А" />
+    <Fact id="84" object="мяч" attribute="команда" value="Б" />
+    <Fact id="85" object="мяч" attribute="размер" value="любой" />
   </Facts>
   <Rules>
-    <Rule id="0" if="0 v 1" result="4"></Rule>
-    <Rule id="1" if="1 ^ 1 v 2" result="5"></Rule>
-    <Rule id="2" if="3 ^ 1 v 2" result="6"></Rule>
-    <Rule id="3" if="4 ^ 5" result="6" />
-    <Rule id="4" if="0 v ( 1 v 2 )" result="0" />
-    <Rule id="5" if="7 ^ ( 8 v 1)" result="0" />
-    <Rule id="6" if="7 ^ 8" result="1" />
-    <Rule id="7" if="10" result="9" />
+    <Rule id="1" if="19 ^ 21 v 18 ^ 23" result="1" />
+    <Rule id="2" if="19 ^ 22 v 18 ^ 24" result="2" />
+    <Rule id="3" if="19 ^ 20" result="3" />
   </Rules>
 </Database>
