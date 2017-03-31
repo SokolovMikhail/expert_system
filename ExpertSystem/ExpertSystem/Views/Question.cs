@@ -38,6 +38,7 @@ namespace ExpertSystem
             Random rnd = new Random();
 
             questionId = rnd.Next(0, QuestionsList.Count);
+            //questionId = 2;//Заглушка
             currentQuestion = QuestionsList[questionId];
             QuestionTextBox.Text = currentQuestion.questionText;
             //Варианты ответа
